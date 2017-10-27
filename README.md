@@ -1,2 +1,2 @@
-# Yuelab_SE.call
+# SE.call
 Run ROSE in other species
