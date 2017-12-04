@@ -9,6 +9,6 @@ cp $genome_gff $rose/annotation/|chmod 777
 #add your species into ROSE_main.py
 genomeDict = "$species"..........
 #make your enhancer bedfile into GFF
-awk 'BEGIN {FS="\t" ; OFS="\t"}{print $1,enhancer_"NR","your",$2,$3,".",".",".",".","NR"}'  your_enhancer.bed >your_enhancer.gff
+awk 'BEGIN {FS="\t" ; OFS="\t"}{print $1,"enhancer_"NR,"your",$2,$3,".",".",".",".","NR"}'  your_enhancer.bed >your_enhancer.gff
 #Let's go
 python ROSE_main.py -g "$species" -i your_enhancer.gff -r your_IP.bam -o your_out_put -c your Input.bam
